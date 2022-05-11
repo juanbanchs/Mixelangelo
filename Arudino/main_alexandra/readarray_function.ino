@@ -1,27 +1,6 @@
-void consume_paint(int arrayToUse, int colour, double mlConsumed)
-{
-  paintLeftInSyringes[colour] = paintLeftInSyringes[colour]-mlConsumed; // Remove Paint used from Syrinces
-  paintLeftForDC[arrayToUse][colour] = paintLeftForDC[arrayToUse][colour]-mlConsumed; // Remove paint used from DC array
-//  Serial.print(PAINT_COLOUR[colour]); Serial.print(" paint removed from arrays:"); Serial.print(mlConsumed); Serial.println(" mL");
-}
-
-void print_current_state() 
-{
-  Serial.println("----------------------------");
-  // Shows the state of our setup
-  
-  //Number of colours
-  Serial.print("Number of colours selected: "); Serial.println(num_colours);
-  
-  // Say how much paint we have left in each Syringe
-  Serial.println("Paint left in syringes (mL):"); for (int i = 0; i < NUM_MOTORS_AND_MIXER; i++) {Serial.print(paintLeftInSyringes[i]); Serial.print(" ");}; Serial.println(" ");
-  
-  // Say how much paint is left to dispense in the desired colours
-  Serial.println("paintLeftForDC: ");
-  for (int i = 0; i < NUM_MOTORS_AND_MIXER; i++) {for (int j = 0; j < NUM_MOTORS_AND_MIXER; j++){Serial.print(paintLeftForDC[i][j]); Serial.print(", ");} Serial.println(" ");}
-  
-  Serial.println("----------------------------\n");
-}
+/*MIXELANGELO 
+Initialization Code
+*/
 
 int read_string(String color) {
 
