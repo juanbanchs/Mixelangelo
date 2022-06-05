@@ -23,7 +23,8 @@ void print_current_state()
   Serial.println("----------------------------\n");
 }
 
-int read_string(String color) {
+int read_string(String color) 
+{
 
 //  int test_num = 20;
 //  for (int i = 0; i < NUM_MOTORS; i++)
@@ -34,8 +35,6 @@ int read_string(String color) {
 //      test_num = test_num -1;
 //    }
 //  }
-
-// 
     char num_colours_p = color.charAt(0);
     String num_colours_pp = String(num_colours_p);
     int num_colours_ppp = num_colours_pp.toInt();
