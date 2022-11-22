@@ -130,7 +130,7 @@ void setup() {
   }
 
   // ------------------------------------------------------------------------------------------
-  // Now we start the Paint Dispensing Process
+  // Now we start the Paint Mixing Process
   Serial.print("-------- Now beginning colour mixing -------- DC1Location: "); Serial.println(DC1Location);
   DC1Location = mix_all_colours(DC1Location);
 
